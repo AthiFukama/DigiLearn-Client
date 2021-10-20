@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Lecturer Information and Form</title>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script 
+		src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script 
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<link rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+	<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/css/user-form.css"
+		th:href="@{/css/user-form.css}">
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">	
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+	<script type="text/javascript">
+	    $(document).ready(function() {
+	        $('#userList').DataTable();
+	    } );
+	</script>
+	<style>
+ .sidenav{
+            height: 100% ;
+            width: 240px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color:#404040;
+            overflow-x: hidden;
+            padding-top:20px;
+
+
+        }
+
+        .sidenav default{
+            padding:6px 8px 6px 16px;
+            font-size:25px;
+            color:#818181;
+            display:block;
+            border-radius: 50%;
+        }
+
+        .sidenav deafult:hover {color:#FDFCFC;}
+
+        .main {
+            margin-left:200px;
+            font-size:20px;
+            padding:0px 0px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top:15px;
+            }
+            .sidenav default {
+                font-size: 18px;
+            }
+</style>
+    <link rel="stylesheet" href="static/css/SideNavStyling.css">
+</head>
+<body>
+<div class ="sidenav">
+    <a href ="subjectPortal.html">
+        <img src ="static/img/Logo.PNG" width =250px height =170px>
+        <hr height =3px; color ="white" />
+    </a>
+    <br/>
+
+	<a href="universityPortal.html">
+    <button onclick ="" class ="buttonMenuWithUndercategory1"><h3>University</h3></button>
+	</a>
+    <br/>
+    <br/>
+
+	<a href="facultyPortal.html">
+    <button onclick="" class="buttonMenuWithUndercategory2"><h3>Faculty</h3></button>
+	</a>
+    <br/>
+    <br/>
+
+    <button onclick="" class="buttonMenuWithUndercategory3"><h3>Department</h3></a></button>
+    <br/>
+    <br/>
+	
+    <a href="subjectPortal.html">
+    <button onclick="" class="buttonMenuWithUndercategory4"><h3>Subject</h3></button>
+	</a>
+    <br/>
+    <br/>
+
+    <a href="Lecturer - Home.html">
+    <button onclick="" class="buttonMenuWithUndercategory5"><h3>Lecturer</h3></button>
+	</a>
+    <br/>
+    <br/>
+
+    <a href="Exam.html">
+    <button onclick="" class="buttonMenuWithUndercategory6"><h3>Exam</h3></button>
+	</a>
+    <br/>
+    <br/>
+
+	<a href="Student.html">
+    <button onclick="" class="buttonMenuWithUndercategory6"><h3>Student</h3></button>
+	</a>
+    <br/>
+    <br/>
+
+    <button onclick="" class="buttonMenuWithUndercategory6"><h3>Course</h3></a></button>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+</div>
+	<div class="container">
+	<div class="mx-auto col-sm-8 main-section" id="myTab" role="tablist">
+		<ul class="nav nav-tabs justify-content-end">
+			<li class="nav-item">
+			<a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">List</a>
+			</li>
+		</ul>
+		<div class="tab-content" id="myTabContent">
+			<div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+				<div class="card">
+					<div class="card-header">
+						<h4>Home</h4>
+					</div>
+					<div class="card-body">
+					<a href="Lecturer.html">
+						<input type="button" class="btn btn-primary"
+										value="Create Lecturer">
+					</a>
+					<a href="Lecturer - Delete.html">
+						<input type="button" class="btn btn-primary"
+										value="Delete Lecturer">
+					</a>
+					</div>
+				</div>
+			</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
