@@ -20,6 +20,8 @@
     <!-- Los iconos tipo Solid de Fontawesome-->
     <link rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <link rel="stylesheet" type="text/css" href="static/css/user-form.css"
+          th:href="@{/css/user-form.css}">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
     <!-- Nuestro css-->
@@ -39,6 +41,113 @@
 	    } );
 	</script>
 </head>
+<style>
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+ .sidenav{
+            height: 100% ;
+            width: 240px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color:#404040;
+            overflow-x: hidden;
+            padding-top:20px;
+
+
+        }
+
+        .sidenav default{
+            padding:6px 8px 6px 16px;
+            font-size:25px;
+            color:#818181;
+            display:block;
+            border-radius: 50%;
+        }
+
+        .sidenav deafult:hover {color:#FDFCFC;}
+
+        .main {
+            margin-left:200px;
+            font-size:20px;
+            padding:0px 0px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top:15px;
+            }
+            .sidenav default {
+                font-size: 18px;
+            }
+
+            .Heading{
+
+            background-color: black;
+            height: 300px;
+            width: 500px;
+
+            }
+        }
+
+</style>
+<body>
+
+
+
+<div class ="sidenav">
+    <a href ="subjectPortal.html">
+        <img src ="static/img/Logo.PNG" width =250px height =170px>
+        <hr height =3px; color ="white" />
+    </a>
+    <br/>
+
+    <button onclick ="" class ="buttonMenuWithUndercategory1"><h3>University</h3></a></button>
+    <br/>
+    <br/>
+
+    <button onclick="" class="buttonMenuWithUndercategory2"><h3>Faculty</h3></a></button>
+    <br/>
+    <br/>
+
+    <button onclick="" class="buttonMenuWithUndercategory3"><h3>Department</h3></a></button>
+    <br/>
+    <br/>
+
+    <button onclick="" class="buttonMenuWithUndercategory4"><h3>Subject</h3></a></button>
+    <br/>
+    <br/>
+
+    <button onclick="" class="buttonMenuWithUndercategory5"><h3>Lecturer</h3></a></button>
+    <br/>
+    <br/>
+
+    <button onclick="" class="buttonMenuWithUndercategory6"><h3>Exam</h3></a></button>
+    <br/>
+    <br/>
+
+    <button onclick="" class="buttonMenuWithUndercategory6"><h3>Student</h3></a></button>
+    <br/>
+    <br/>
+
+    <button onclick="" class="buttonMenuWithUndercategory6"><h3>Course</h3></a></button>
+    <br/>
+    <br/>
+
+    <button onclick="" class="buttonMenuWithUndercategory6"><h3>Marks</h3></a></button>
+    <br/>
+    <br/>
+
+
+
+
+</div>
+
+<div style="background-image: url('Work_background.png');">
 <body>
 <div class="container">
     <div class="mx-auto col-sm-8 main-section" id="myTab" role="tablist">
