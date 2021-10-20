@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>DigiLearn</title>
+    <title>SubjectPortal</title>
 
 
     <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!--SideNav styles -->
-    <link href = "static/css/SubjectPortalStyles.css" type ="text/css" rel= "stylesheet" media ="screen"/>
 
+    <link href = "static/css/SubjectPortalStyles.css" type ="text/css" rel= "stylesheet" media ="screen"/>
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script
@@ -18,7 +17,7 @@
     <script
             src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
-    <!-- Fonts -->
+
     <link rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
@@ -29,31 +28,21 @@
 
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script defer src="save.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
 
-
-    <!--JavaScript -->
     <script type="text/javascript">
 
 	    $(document).ready(function() {
-
 	        $('#userList').DataTable();
 	    } );
-
-	    fun University(){
-	    location.href="University.html";
-	    }
-
 	</script>
 </head>
+
 <style>
 
-::-webkit-scrollbar {
-    display: none;
-}
-
- .sidenav{
+    .sidenav{
             height: 100% ;
             width: 240px;
             position: fixed;
@@ -91,19 +80,8 @@
                 font-size: 18px;
             }
 
-            .Heading{
-
-            background-color: black;
-            height: 300px;
-            width: 500px;
-
-            }
-        }
-
 </style>
 <body>
-
-
 
 <div class ="sidenav">
     <a href ="subjectPortal.html">
@@ -152,103 +130,183 @@
 
 
 </div>
-
-<div style="background-image: url('Work_background.png');">
-
-
-
-    <div class="container">
-        <div class="mx-auto col-sm-8 main-section" id="myTab" role="tablist">
-            <ul class="nav nav-tabs justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">List</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="true">Form</a>
-                </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Subject List</h4>
+<div class="container">
+    <div class="mx-auto col-sm-8 main-section" id="myTab" role="tablist">
+        <ul class="nav nav-tabs justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="true">Form</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Subject List</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="userList" class="table table-bordered table-hover table-striped">
+                                <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Code</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Credits</th>
+                                    <th scope="col">LecID</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">ADP72S</th>
+                                    <td>APP DEVELOPMENT</td>
+                                    <td>36</td>
+                                    <td>KB12</td>
+                                    <td>
+                                        <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">ITS3X5</th>
+                                    <td>INFORMATION SYSTEMS</td>
+                                    <td>36</td>
+                                    <td>FA1</td>
+                                    <td>
+                                        <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">PP36C</th>
+                                    <td>PROFESIONAL PRACTICE</td>
+                                    <td>30</td>
+                                    <td>BR23</td>
+                                    <td>
+                                        <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">ICE34E</th>
+                                    <td>ELECTIVES</td>
+                                    <td>28</td>
+                                    <td>AR45</td>
+                                    <td>
+                                        <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">ADT57U</th>
+                                    <td>APP THEORY</td>
+                                    <td>36</td>
+                                    <td>GK90</td>
+                                    <td>
+                                        <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">ADF35T</th>
+                                    <td>APP FUNDAMENTALS</td>
+                                    <td>36</td>
+                                    <td>MG32</td>
+                                    <td>
+                                        <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">BPQ34</th>
+                                    <td>BUSINESS STUDIES</td>
+                                    <td>25</td>
+                                    <td>FU21</td>
+                                    <td>
+                                        <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">ES4T</th>
+                                    <td>ECONOMIC STUDIES</td>
+                                    <td>30</td>
+                                    <td>GK12</td>
+                                    <td>
+                                        <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">AP23D</th>
+                                    <td>ARCHITECTURE PRACTICE</td>
+                                    <td>30</td>
+                                    <td>EY32</td>
+                                    <td>
+                                        <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">PT45S</th>
+                                    <td>PHYSIO THEORY</td>
+                                    <td>15</td>
+                                    <td>TQ23</td>
+                                    <td>
+                                        <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">SS4R</th>
+                                    <td>SPORTS SCIENCE</td>
+                                    <td>20</td>
+                                    <td>NP20</td>
+                                    <td>
+                                        <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table id="userList" class="table table-bordered table-hover table-striped">
-                                    <thead class="thead-light">
-                                    <tr>
-                                        <th scope="col">SubCode</th>
-                                        <th scope="col">SubName</th>
-                                        <th scope="col">SubCredits</th>
-                                        <th scope="col">LecID</th>
 
-                                        <th></th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th scope="row">ADP362S</th>
-                                        <td>App Dev</td>
-                                        <td>36NF</td>
-                                        <td>KB12</td>
-
-                                        <td>
-                                            <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-tab">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Add a Subject</h4>
+            </div>
+            <div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-tab">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Add a subject</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Subject Code</label>
+                            <div class="col-lg-9">
+                                <input id="subCode" class="form-control" type="text" value="" required></input>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <form class="form" role="form" autocomplete="off">
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Subject Code</label>
-                                    <div class="col-lg-9">
-                                        <input id="subCode" class="form-control" type="text" >
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Subject Name</label>
-                                    <div class="col-lg-9">
-                                        <input id="subName"class="form-control" type="text" >
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Subject Credits</label>
-                                    <div class="col-lg-9">
-                                        <input id="subCred"class="form-control" type="text">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Lecture ID</label>
-                                    <div class="col-lg-9">
-                                        <input id="lecId"class="form-control" type="text">
-                                    </div>
-                                </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Subject Name</label>
+                            <div class="col-lg-9">
+                                <input id="subName" class="form-control" type="text" value=""required></input>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Subject Credits</label>
+                            <div class="col-lg-9">
+                                <input id="subCredits" class="form-control" type="email" value=""required></input>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Lecturer ID#</label>
+                            <div class="col-lg-9">
+                                <input id="lecId" class="form-control" type="text" value=""required></input>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-12 text-center">
+                                <input type="reset" class="btn btn-secondary" value="Cancel">
+                                <button id="1" class="btn btn-primary">Create</button>
+                            </div>
+                        </div>
 
-                                <div class="form-group row">
-                                    <div class="col-lg-12 text-center">
-                                        <input type="reset" class="btn btn-secondary" value="Cancel">
-                                        <input type="button" id="1" class="btn btn-primary"
-                                               value="Save Changes">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
