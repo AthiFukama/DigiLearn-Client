@@ -22,11 +22,14 @@
           href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
     <link rel="stylesheet" type="text/css" href="static/css/user-form.css"
           th:href="@{/css/user-form.css}">
+
+    <link href = "static/css/SubjectPortalStyles.css" type ="text/css" rel= "stylesheet" media ="screen"/>
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
     <!-- Nuestro css-->
     <link rel="stylesheet" type="text/css" href="static/css/user-form.css"
           th:href="@{/css/user-form.css}">
+
     <!-- DATA TABLE -->
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
@@ -100,7 +103,7 @@
 
 
 <div class ="sidenav">
-    <a href ="subjectPortal.html">
+    <a href ="Student.html">
         <img src ="static/img/Logo.PNG" width =250px height =170px>
         <hr height =3px; color ="white" />
     </a>
@@ -163,26 +166,28 @@
             <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Roster</h4>
+                        <h4>Student Details</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table id="userList" class="table table-bordered table-hover table-striped">
                                 <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">E-mail</th>
+                                    <th scope="col">StudentId</th>
+                                    <th scope="col">FirstName</th>
+                                    <th scope="col">LastName</th>
+                                    <th scope="col">StudentEmail</th>
                                     <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td>Cristian</td>
-                                    <td>Ruiz</td>
-                                    <td>c.r.username@blog.com</td>
+                                    <td>StudentId</td>
+                                    <td>Athi</td>
+                                    <td>Fukama</td>
+                                    <td>athi@gamil.com</td>
+                                    <td>IT</td>
                                     <td>
                                         <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fas fa-user-times"></i></a>
                                     </td>
