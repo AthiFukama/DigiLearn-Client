@@ -3,7 +3,7 @@ const submitthis = document.getElementById("1");
 const saveSubject = async() => {
 	let subCode = document.getElementById("subCode").value
 	let subName = document.getElementById("subName").value
-	let subCred = document.getElementById("subCred").value
+	let subCredits = document.getElementById("subCred").value
 	let lecId = document.getElementById("lecId").value
 
     let response = await fetch('http://localhost:8080/subject/create',{
@@ -14,11 +14,11 @@ const saveSubject = async() => {
         'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-        subjectCode: subCode,
-        subjectName: subName,
-        subjectCredits: subCred,
-        lectureId: lecId,
-        id: "7"
+        Subject Code: subCode,
+        Subject Name: subName,
+        Subject Credits: subCredits,
+        Lecture ID#: lecId,
+
     })
 })
 console.log(response);
